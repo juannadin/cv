@@ -5,8 +5,15 @@ type InterestsProps = {
   data: InterestData;
 }
 
-const Interests: FC<InterestsProps> = () => (
-  <article></article>
+const Interests: FC<InterestsProps> = ({ data }) => (
+  <article>
+    <h3>Interests and Hobbies</h3>
+    <ul>
+      {data.map((interest) => (
+        <li>{interest}</li>
+      ))}
+    </ul>
+  </article>
 );
 
 export default Interests;

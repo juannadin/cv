@@ -46,7 +46,8 @@ type Skill = {
 
 type Experience = {
   company: string;
-  jobTitle: string;
+  title: string;
+  description: string;
   startDate: string;
   endDate: string;
 };
@@ -152,25 +153,29 @@ const data: Data = {
     experiences: [
       {
         company: 'Mercado Libre',
-        jobTitle: 'Senior Full Stack Developer',
+        title: 'Senior Full Stack Developer',
+        description: 'Full ownership of the entire development process. Product Desgin, strategic thinking, estimations and allocations, scrum agile development, production build and release, business tracking. Mentoring, asset hunting and screening.',
         startDate: 'Nov 2016',
         endDate: 'Present',
       },
       {
         company: 'Wunderman',
-        jobTitle: 'Technical Leader',
+        title: 'Technology Lead',
+        description: 'Responsible of leading a development team. Leadership and management skills applied in a technical context with a developers squad. Projects estimations, mentoring and guidance, work stream and allocation',
         startDate: 'Sep 2015',
         endDate: 'Nov 2016',
       },
       {
         company: 'Wunderman',
-        jobTitle: 'Senior Front End Developer',
+        title: 'Senior Front End Developer',
+        description: 'Front-End web development for several clients such as ford.com, and lincoln.com. Javascript, HTML, CSS, XML, Freemarker and AEM plattforms, Through SVN & GIT. Desktop & Mobile.',
         startDate: 'Jun 2012',
         endDate: 'Aug 2015',
       },
       {
         company: 'IBM',
-        jobTitle: 'Senior Full Stack Developer',
+        title: 'Portal Web Developer',
+        description: 'BT/IT PartnerWorld Web Portal Producer. Maintenance and frontend development front-end IBM internal sites through CMS',
         startDate: 'Dec 2010',
         endDate: 'May 2012',
       },
