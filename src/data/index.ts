@@ -1,11 +1,7 @@
 
 export type Data = {
   header: Header;
-  skills: Skills;
-  experiences: Experiences;
-  educations: Educations;
-  extraMiles: ExtraMiles;
-  interests: Interests;
+  body: Body;
 };
 
 export type Header = {
@@ -14,6 +10,14 @@ export type Header = {
   about: string;
   motto: string;
   personalInfo: Array<PersonalInfo>;
+}
+
+export type Body = {
+  skills: Skills;
+  experiences: Experiences;
+  educations: Educations;
+  extraMiles: ExtraMiles;
+  interests: Interests;
 }
 
 export type Skills = {
@@ -76,130 +80,132 @@ const data: Data = {
       },
     ],
   },
-  skills: {
-    soft: [
+  body: {
+    skills: {
+      soft: [
+        {
+          name: 'Leadership',
+          ammount: 90,
+        },
+        {
+          name: 'Team Work',
+          ammount: 85,
+        },
+        {
+          name: 'Decision-making',
+          ammount: 90,
+        },
+        {
+          name: 'Time Management',
+          ammount: 80,
+        },
+        {
+          name: 'Communication',
+          ammount: 95,
+        },
+        {
+          name: 'Agile Development',
+          ammount: 80,
+        },
+      ],
+      technical: [
+        {
+          name: 'Node.js',
+          ammount: 95,
+        },
+        {
+          name: 'Express.js',
+          ammount: 90,
+        },
+        {
+          name: 'React.js',
+          ammount: 90,
+        },
+        {
+          name: 'Typescript',
+          ammount: 80,
+        },
+        {
+          name: 'AWS',
+          ammount: 75,
+        },
+        {
+          name: 'Unit & e2e testing',
+          ammount: 95,
+        },
+      ],
+      languajes: [
+        {
+          name: 'Spanish',
+          ammount: 100,
+        },
+        {
+          name: 'English',
+          ammount: 90,
+        },
+        {
+          name: 'Portuguesse',
+          ammount: 20,
+        },
+      ],
+    },
+    experiences: [
       {
-        name: 'Leadership',
-        ammount: 90,
+        company: 'Mercado Libre',
+        jobTitle: 'Senior Full Stack Developer',
+        startDate: 'Nov 2016',
+        endDate: 'Present',
       },
       {
-        name: 'Team Work',
-        ammount: 85,
+        company: 'Wunderman',
+        jobTitle: 'Technical Leader',
+        startDate: 'Sep 2015',
+        endDate: 'Nov 2016',
       },
       {
-        name: 'Decision-making',
-        ammount: 90,
+        company: 'Wunderman',
+        jobTitle: 'Senior Front End Developer',
+        startDate: 'Jun 2012',
+        endDate: 'Aug 2015',
       },
       {
-        name: 'Time Management',
-        ammount: 80,
-      },
-      {
-        name: 'Communication',
-        ammount: 95,
-      },
-      {
-        name: 'Agile Development',
-        ammount: 80,
+        company: 'IBM',
+        jobTitle: 'Senior Full Stack Developer',
+        startDate: 'Dec 2010',
+        endDate: 'May 2012',
       },
     ],
-    technical: [
+    educations: [
       {
-        name: 'Node.js',
-        ammount: 95,
+        institution: 'Escuela de Arte Multimedial Da Vinci',
+        title: 'Web Design & Programming',
+        degree: 'Technical degree',
+        startDate: '2009',
+        endDate: '2012',
       },
       {
-        name: 'Express.js',
-        ammount: 90,
-      },
-      {
-        name: 'React.js',
-        ammount: 90,
-      },
-      {
-        name: 'Typescript',
-        ammount: 80,
-      },
-      {
-        name: 'AWS',
-        ammount: 75,
-      },
-      {
-        name: 'Unit & e2e testing',
-        ammount: 95,
+        institution: 'Escuela San Ladislao',
+        title: 'Economy and Management',
+        degree: 'High School degree',
+        startDate: '2002',
+        endDate: '2004',
       },
     ],
-    languajes: [
-      {
-        name: 'Spanish',
-        ammount: 100,
-      },
-      {
-        name: 'English',
-        ammount: 90,
-      },
-      {
-        name: 'Portuguesse',
-        ammount: 20,
-      },
+    extraMiles: [
+      'User Experience',
+      'Jira, Trello',
+      'Adobe Illustrator & Photoshop',
+      'Zeplin',
+      'SQL, AEM, PHP, jQuery',
     ],
-  },
-  experiences: [
-    {
-      company: 'Mercado Libre',
-      jobTitle: 'Senior Full Stack Developer',
-      startDate: 'Nov 2016',
-      endDate: 'Present',
-    },
-    {
-      company: 'Wunderman',
-      jobTitle: 'Technical Leader',
-      startDate: 'Sep 2015',
-      endDate: 'Nov 2016',
-    },
-    {
-      company: 'Wunderman',
-      jobTitle: 'Senior Front End Developer',
-      startDate: 'Jun 2012',
-      endDate: 'Aug 2015',
-    },
-    {
-      company: 'IBM',
-      jobTitle: 'Senior Full Stack Developer',
-      startDate: 'Dec 2010',
-      endDate: 'May 2012',
-    },
-  ],
-  educations: [
-    {
-      institution: 'Escuela de Arte Multimedial Da Vinci',
-      title: 'Web Design & Programming',
-      degree: 'Technical degree',
-      startDate: '2009',
-      endDate: '2012',
-    },
-    {
-      institution: 'Escuela San Ladislao',
-      title: 'Economy and Management',
-      degree: 'High School degree',
-      startDate: '2002',
-      endDate: '2004',
-    },
-  ],
-  extraMiles: [
-    'User Experience',
-    'Jira, Trello',
-    'Adobe Illustrator & Photoshop',
-    'Zeplin',
-    'SQL, AEM, PHP, jQuery',
-  ],
-  interests: [
-    'Music production',
-    'Composition',
-    'Guitar and Piano',
-    'Parenthood',
-    'Volleyball',
-  ],
+    interests: [
+      'Music production',
+      'Composition',
+      'Guitar and Piano',
+      'Parenthood',
+      'Volleyball',
+    ],
+  }
 };
 
 export default data;
