@@ -1,8 +1,8 @@
 {
-  "name": "CV",
+  "homepage": "https://juannadin.github.io/cv",
+  "name": "cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://juannadin.github.io/cv",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
@@ -11,6 +11,7 @@
     "@types/node": "^12.19.11",
     "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.10",
+    "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -23,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "help": "gh-pages --help"
   },
   "eslintConfig": {
     "extends": [
