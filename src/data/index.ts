@@ -79,7 +79,7 @@ type Education = {
 const data: Data = {
   header: {
     title: 'Juan Ignacio Nadin.',
-    subtitle: '[ Product Owner & Full Stack Developer ]',
+    subtitle: '[ Product Owner & Full\xA0Stack Developer ]',
     about: 'I\'m a data-driven, product-oriented and results-focused person, with +10 years of experience in the software industry. I understand that technology is no limitation for product design.',
     motto: 'There\'s always a way.',
     personalInfo: [
