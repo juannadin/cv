@@ -1,0 +1,42 @@
+@mixin font-size($size-value: 1.6) {
+  font-size: $size-value;             // Default value to support legacy versions.
+  font-size: ($size-value / $font-size-16) + rem;  // sass-lint:disable-line no-duplicate-properties
+}
+
+@mixin set-dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@function calculate-rem($value) {
+  @return ($value / $font-size-16) + rem; // 16px is base-html-font-size.
+}
+
+$desktop-width-break: 768px;
+
+// layout colors
+$black: #333332;
+$white: #FFFFFF;
+$light-grey: #A1A1A1;
+$dark-grey: #777777;
+
+// fonts
+$font-family-base: Arial, Helvetica, sans-serif;
+$font-size-100: 100px;
+$font-size-60: 60px;
+$font-size-32: 32px;
+$font-size-28: 28px;
+$font-size-22: 22px;
+$font-size-20: 20px;
+$font-size-17: 17px;
+$font-size-16: 16px;
+
+$font-weight-600: 600;
+
+$letter-spacing-h1: -4px;
+$letter-spacing-h2: 0.1px;
+
+$layout-width: 970px;
+
+$collumn-small: 286px;
+$collumn-large: 342px;

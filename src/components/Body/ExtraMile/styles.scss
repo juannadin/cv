@@ -1,0 +1,17 @@
+.extra-mile-skills {
+  margin-bottom: calculate-rem(60px);
+
+  &-list {
+    &__item {
+      color: $light-grey;
+      margin-bottom: calculate-rem(17px);
+      letter-spacing: calculate-rem(0.6px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width-break) {
+  .extra-mile-skills {
+    margin-bottom: calculate-rem(116px);
+  }
+}

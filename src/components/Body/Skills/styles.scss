@@ -1,0 +1,15 @@
+@import './SkillLevelBar/styles.scss';
+
+.skills {
+  .skill {
+    margin-bottom: calculate-rem(8px);
+
+    &__title {
+      color: $light-grey;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

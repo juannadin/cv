@@ -1,22 +1,22 @@
 import React, { FC } from 'react';
 import { Educations } from '../../../data';
+import Section from '../Section';
 
 type EducationProps = {
   data: Educations;
 };
 
 const Education: FC<EducationProps> = ({ data }) => (
-  <article>
-    <h3>Education</h3>
-    {data.map((education) => (
-      <div>
-        <h4>{education.title}</h4>
-        <span>{education.startDate} to {education.endDate}</span>
-        <h5>{education.institution}</h5>
-        <p>{education.degree}</p>
+  <Section className="educations" title="Education">
+    {data.map((education, key) => (
+      <div className="education" key={key}>
+        <h4 className="education__title">{education.title}</h4>
+        <span className="education__date-range">{education.startDate} to {education.endDate}</span>
+        <h5 className="education__institution">{education.institution}</h5>
+        <p className="education__degree">{education.degree}</p>
       </div>
     ))}
-  </article>
+  </Section>
 );
 
 export default Education;

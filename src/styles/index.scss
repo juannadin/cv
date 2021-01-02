@@ -1,2 +1,51 @@
+@import '_reset';
 @import '_normalize';
+@import '_variables';
 
+@import '../components/Header/styles.scss';
+@import '../components/Body/styles.scss';
+@import '../components/Footer/styles.scss';
+
+html, body {
+  font-size: $font-size-16;
+  font-family: $font-family-base;
+}
+
+h1 { 
+  @include font-size($font-size-60);
+  font-weight: $font-weight-600;
+  letter-spacing: $letter-spacing-h1;
+}
+h2 { @include font-size($font-size-32); }
+h3 { 
+  @include font-size($font-size-22);
+  font-weight: $font-weight-600;
+}
+h4 { @include font-size($font-size-22); }
+h5 { @include font-size($font-size-17); }
+ul, li, p, span { @include font-size($font-size-16); }
+
+.container {
+  margin: 0 calculate-rem(20px);
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: $white;
+    background-color: $black;
+  }
+}
+
+@media (min-width: $desktop-width-break) {
+  h1 {
+    @include font-size($font-size-100);
+  }
+  .container {
+    margin: 0 auto;
+    width: calculate-rem($layout-width);
+  }
+}

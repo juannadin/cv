@@ -2,6 +2,7 @@
 export type Data = {
   header: Header;
   body: Body;
+  footer: Footer;
 };
 
 export type Header = {
@@ -20,6 +21,15 @@ export type Body = {
   interests: Interests;
 }
 
+export type Footer = {
+  links: Array<FooterLink>
+}
+
+type FooterLink = {
+  name: string;
+  url: string;
+}
+
 export type Skills = {
   soft: Array<Skill>;
   technical: Array<Skill>;
@@ -34,10 +44,16 @@ export type ExtraMiles = Array<string>
 
 export type Interests = Array<string>
 
-type PersonalInfo = {
-  type: string;
+export type PersonalInfo = {
+  type: PersonalInfoType;
   value: string;
 };
+
+export enum PersonalInfoType {
+  ADDRESS = 'Address',
+  EMAIL = 'Email',
+  CELLPHONE = 'Cell'
+}
 
 type Skill = {
   name: string;
@@ -68,15 +84,15 @@ const data: Data = {
     motto: 'There\'s always a way.',
     personalInfo: [
       {
-        type: 'Address',
+        type: PersonalInfoType.ADDRESS,
         value: 'Martinez, Buenos Aires, ARG',
       },
       {
-        type: 'Email',
+        type: PersonalInfoType.EMAIL,
         value: 'juan.ignacio.nadin@gmail.com',
       },
       {
-        type: 'Cell',
+        type: PersonalInfoType.CELLPHONE,
         value: '+54 11 6332-2736',
       },
     ],
@@ -98,15 +114,15 @@ const data: Data = {
         },
         {
           name: 'Time Management',
-          ammount: 80,
+          ammount: 85,
         },
         {
           name: 'Communication',
-          ammount: 95,
+          ammount: 90,
         },
         {
           name: 'Agile Development',
-          ammount: 80,
+          ammount: 85,
         },
       ],
       technical: [
@@ -156,7 +172,7 @@ const data: Data = {
         title: 'Senior Full Stack Developer',
         description: 'Full ownership of the entire development process. Product Desgin, strategic thinking, estimations and allocations, scrum agile development, production build and release, business tracking. Mentoring, asset hunting and screening.',
         startDate: 'Nov 2016',
-        endDate: 'Present',
+        endDate: 'present',
       },
       {
         company: 'Wunderman',
@@ -210,7 +226,19 @@ const data: Data = {
       'Parenthood',
       'Volleyball',
     ],
-  }
+  },
+  footer: {
+    links: [
+      {
+        name: 'Linkedin',
+        url: 'https://www.linkedin.com/in/juanignaciogonzalez',
+      },
+      {
+        name: 'Github',
+        url: 'https://github.com/juannadin',
+      },
+    ],
+  },
 };
 
 export default data;

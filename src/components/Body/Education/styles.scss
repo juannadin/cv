@@ -1,0 +1,46 @@
+.educations {
+  margin-bottom: calculate-rem(60px);
+
+  .education {
+    position:relative;
+    margin-bottom: calculate-rem(52px);
+
+    &__title {
+      @include font-size($font-size-16);
+      letter-spacing: calculate-rem(0.7px);
+      margin-bottom: calculate-rem(16px);
+    }
+
+    &__date-range {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: calculate-rem(50px);
+      width: calculate-rem(200px);
+      font-style: italic;
+      text-align: right;
+      letter-spacing: calculate-rem(0.4px);
+    }
+    
+    &__institution {
+      color: $light-grey;
+      margin-bottom: calculate-rem(18px);
+    }
+    
+    &__degree {
+      color: $dark-grey;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-break) {
+  .educations {
+    margin-bottom: calculate-rem(123px);
+
+    .education {
+      &__date-range {
+        right: calculate-rem(15px);
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.interests {
+  &-list {
+    &__item {
+      color: $light-grey;
+      margin-bottom: calculate-rem(17px);
+      letter-spacing: calculate-rem(0.6px);
+    }
+  }
+}

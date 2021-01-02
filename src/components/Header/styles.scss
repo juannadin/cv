@@ -1,0 +1,63 @@
+.header {
+  color: $black;
+  background-color: $white;
+
+  &__title {
+    margin: calculate-rem(104px) 0 0 0;
+  }
+
+  &__subtitle {
+    margin: calculate-rem(12px) 0 0 0;
+    letter-spacing: $letter-spacing-h2
+  }
+
+  &__about, &__motto {
+    @include font-size($font-size-22);
+    letter-spacing: calculate-rem(0.1px);
+    line-height: calculate-rem(33px);
+  }
+
+  &__about {
+    margin: calculate-rem(53px) 0 0 0;
+  }
+
+  &__motto {
+    margin: calculate-rem(22px) 0 0 0;
+    font-weight: $font-weight-600
+  }
+
+  &__info {
+    margin-bottom: calculate-rem(38px);
+  }
+
+  &__personal-info {
+    margin: calculate-rem(47px) 0 0 0;
+    display: flex;
+    flex-direction: column;
+
+    .personal-info-item {
+      @include font-size($font-size-20);
+      &__link {
+        margin: calculate-rem(4px) 0 calculate-rem(12px) 0;
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width-break) {
+  .header {
+    &__personal-info {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .personal-info-item {
+        &__link {
+          margin: 0;
+          display: inline;
+          margin-left: calculate-rem(8px);
+        }
+      }
+    }
+  }
+}

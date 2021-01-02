@@ -1,0 +1,44 @@
+.experience {
+  position:relative;
+  margin-bottom: calculate-rem(37px);
+
+  &__company {
+    @include font-size($font-size-16);
+    letter-spacing: calculate-rem(0.7px);
+    margin-bottom: calculate-rem(18px);
+  }
+
+  &__date-range {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: calculate-rem(50px);
+    width: calculate-rem(200px);
+    font-style: italic;
+    text-align: right;
+    letter-spacing: calculate-rem(0.4px);
+  }
+  
+  &__job-title {
+    color: $light-grey;
+    margin-bottom:calculate-rem(15px);
+  }
+  
+  &__description {
+    color: $dark-grey;
+    line-height: calculate-rem(26px);
+  }
+}
+
+
+@media (min-width: $desktop-width-break) {
+  .experience {
+    &__date-range {
+      right: calculate-rem(49px);
+    }
+    
+    &__description {
+      padding-right: calculate-rem(46px);
+    }
+  }
+}

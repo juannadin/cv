@@ -1,0 +1,48 @@
+@import './Section/styles.scss';
+@import './Skills/styles.scss';
+@import './Experience/styles.scss';
+@import './Education/styles.scss';
+@import './ExtraMile/styles.scss';
+@import './Interests/styles.scss';
+
+.main {
+  color: $white;
+  background-color: $black;
+  padding-top: calculate-rem(71px);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .final-break {
+    margin-top: calculate-rem(75px);
+    margin-left: 0;
+    height: calculate-rem(4px);
+    border: none;
+    background-color: $light-grey;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width-break) {
+  .main {
+    .container {
+      flex-direction: row;
+      
+      .collumn {
+        &.small {
+          width: calculate-rem($collumn-small);
+        }
+        
+        &.large {
+          width: calculate-rem($collumn-large);
+        }
+      }
+    }
+
+    .final-break {
+      width: calculate-rem(266px);
+    }
+  }
+}

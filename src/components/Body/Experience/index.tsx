@@ -1,22 +1,22 @@
 import React, { FC } from 'react';
 import { Experiences } from '../../../data';
+import Section from '../Section';
 
 type ExperienceProps = {
   data: Experiences;
 }
 
 const Experience: FC<ExperienceProps> = ({ data }) => (
-  <article>
-    <h3>Experience</h3>
-        {data.map((education) => (
-      <div>
-        <h4>{education.company}</h4>
-        <span>{education.startDate} to {education.endDate}</span>
-        <h5>{education.title}</h5>
-        <p>{education.description}</p>
+  <Section className="experiences" title="Experience">
+    {data.map((experience, key) => (
+      <div className="experience" key={key}>
+        <h4 className="experience__company">{experience.company}</h4>
+        <span className="experience__date-range">{experience.startDate} to {experience.endDate}</span>
+        <h5 className="experience__job-title">{experience.title}</h5>
+        <p className="experience__description">{experience.description}</p>
       </div>
     ))}
-  </article>
+  </Section>
 );
 
 export default Experience;
