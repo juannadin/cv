@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/__tests__/unit/components/Header/index.test.tsx"  ]
 }

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header render all components 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      class="container"
+    >
+      <h1
+        class="header__title"
+      >
+        this is a title
+      </h1>
+      <h2
+        class="header__subtitle"
+      >
+        this is a subtitle
+      </h2>
+      <p
+        class="header__about"
+      >
+        lorem ipsum about content
+      </p>
+      <p
+        class="header__motto"
+      >
+        this is my motto
+      </p>
+      <address
+        class="header__info"
+      >
+        <ul
+          class="header__personal-info"
+        >
+          <li
+            class="personal-info-item"
+          >
+            <strong
+              class="personal-info-item__type"
+            >
+              Address
+            </strong>
+            <a
+              class="personal-info-item__link"
+              href="https://goo.gl/maps/1iYrzpWL5EnDp2GT7"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Martinez, Buenos Aires, ARG
+            </a>
+          </li>
+          <li
+            class="personal-info-item"
+          >
+            <strong
+              class="personal-info-item__type"
+            >
+              Email
+            </strong>
+            <a
+              class="personal-info-item__link"
+              href="mailto:juan.ignacio.nadin@gmail.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              juan.ignacio.nadin@gmail.com
+            </a>
+          </li>
+          <li
+            class="personal-info-item"
+          >
+            <strong
+              class="personal-info-item__type"
+            >
+              Cell
+            </strong>
+            <a
+              class="personal-info-item__link"
+              href="tel:+54 11 6332-2736"
+              rel="noreferrer"
+              target="_blank"
+            >
+              +54 11 6332-2736
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+  </header>
+</div>
+`;
