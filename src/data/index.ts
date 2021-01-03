@@ -237,6 +237,10 @@ const data: Data = {
         name: 'Github',
         url: 'https://github.com/juannadin',
       },
+      {
+        name: 'PDF',
+        url: `${process.env.PUBLIC_URL}/JuanIgnacioCV2020.pdf`,
+      },
     ],
   },
 };

@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
 import { Footer as FooterProps } from '../../data';
 
-
-
 const Footer: FC<FooterProps> = ({ links }) => (
   <footer className="footer">
     <div className="container">
